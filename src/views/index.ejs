@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./styles.css">
-    <title>El tiempo en Granadilla</title>
+    <title>El tiempo en Vilaflor</title>
+    <script src="reloj.js"></script>
+    <script src="./main.js"></script>
+    <script src="./skycons.js"></script>
 </head>
-<body onload="mueveReloj()">
-    <form name="form_reloj">
-        <input type="text" name="reloj" size="10">
-    </form>
+<body onload="mueveReloj()" id="body">
     <div class="location">
-        <h1 class="location-timezone">El Médano</h1>
+        <h1 class="location-timezone">Vilaflor de Chasna</h1>
     </div>
+    <form name="form_reloj">
+        <input type="text" name="reloj" size="10" class="reloj">
+    </form>
     <div class="temperature">
         <div class="degree-section">
             <h2 class="temperature-degree">-</h2>
@@ -25,22 +28,6 @@
         <h3 class="wind-speed-data">-</h3>
         <span>Nudos</span>
     </div>
-
-    <script language="JavaScript">
-        function mueveReloj(){
-            momentoActual = new Date()
-            hora = momentoActual.getHours()
-            minuto = momentoActual.getMinutes()
-            segundo = momentoActual.getSeconds()
-        
-            horaImprimible = hora + " : " + minuto + " : " + segundo
-        
-            document.form_reloj.reloj.value = horaImprimible
-        
-            setTimeout("mueveReloj()",1000)
-        }
-    </script>
-    <script src="./main.js"></script>
-    <script src="./skycons.js"></script>
+    <input type="range" min="-2" max="36" step="1" value="1" id="slider">
 </body>
 </html>

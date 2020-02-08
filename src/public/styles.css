@@ -9,16 +9,20 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(rgb(47,150,163), rgb(48,62,143));
+    font-family: sans-serif;
+    color: white;
+    /*El bg-color esta en el JS*/
+}
+.reloj{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    background-color: transparent;
+    border: transparent;
+    font-size: 55px;
     font-family: sans-serif;
     color: white;
 }
-.form_reloj{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .location, .temperature{
     width: 50%;
     display: flex;
@@ -28,6 +32,9 @@ body{
     justify-content: center;
     height: 10vh;
 }
+.location-timezone{
+    font-size: 70px;
+}
 .temperature{
     justify-content: space-around;
     height: 20vh;
@@ -36,12 +43,12 @@ body{
     display: flex;
     align-items: center;
 }
+.degree-section h2{
+    font-size: 60px;
+}
 .degree-section span{
     margin: 10px;
     font-size: 30px;
-}
-.degree-section h2{
-    font-size: 40px;
 }
 .wind-speed{
     display: flex;
