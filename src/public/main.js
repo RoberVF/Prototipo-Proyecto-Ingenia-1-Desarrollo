@@ -5,13 +5,7 @@ window.addEventListener('load', ()=>{
     let temperatureDegree= document.querySelector(".temperature-degree")
     let windVelocity= document.querySelector(".wind-speed-data")
     let body= document.getElementById('body')
-    let debugTemperature = 0
-
-
-    
-    // 'linear-gradient(rgb(47,150,163), rgb(48,62,143))';
-
-    
+    let debugTemperature   
     
     if(navigator.geolocation){
         navigator.geolocation.getCurrentPosition(position => {
